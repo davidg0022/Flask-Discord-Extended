@@ -1,0 +1,17 @@
+CHANGELOG.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Flask_Discord_Extended.egg-info/PKG-INFO
+Flask_Discord_Extended.egg-info/SOURCES.txt
+Flask_Discord_Extended.egg-info/dependency_links.txt
+Flask_Discord_Extended.egg-info/not-zip-safe
+Flask_Discord_Extended.egg-info/requires.txt
+Flask_Discord_Extended.egg-info/top_level.txt
+dist/Flask-Discord-Extended-0.0.1.tar.gz
+flask_discord_extended/__init__.py
+flask_discord_extended/configs.py
+flask_discord_extended/exceptions.py
+flask_discord_extended/oauth.py
+flask_discord_extended/utilities.py
