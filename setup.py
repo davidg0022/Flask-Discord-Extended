@@ -20,7 +20,7 @@ requirements = [
 
 setup(
     name='Flask-Discord-Extended',
-    version='0.0.5',
+    version='0.0.6',
     url='https://github.com/davidg0022/Flask-Discord-Extended',
     license='MIT',
     author='Gatea David',

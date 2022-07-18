@@ -110,4 +110,10 @@ class Utilities():
         except KeyError:
             return {}
         return self.send_chanel_message(chanel = chanel, content = content )
+
+    def get_profile_data(self, user_id):
+        return self._request(route=f"/users/{user_id}", method="GET")
         
+    def get_avatar_url(self, user_id):
+        avatar_id = self.get_profile_data(user_id=user_id)["avatar"]
+        return f"https://cdn.discordapp.com/avatars/{user_id}/{avatar_id}"
