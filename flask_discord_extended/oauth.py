@@ -36,23 +36,32 @@ class Oauth:
 
 
     def _get_access_token(self):
-        auth = self._make_login_session().fetch_token(
-                self.discord_token_url,
-                client_secret = self.client_secret,
-                authorization_response = request.url
-            )
+        # auth = self._make_login_session().fetch_token(
+        #         self.discord_token_url,
+        #         client_secret = self.client_secret,
+        #         authorization_response = request.url
+        #     )
+
+        payload = {
+            "client_id":self.client_id,
+            "client_secret":self.client_secret,
+            "grant_type": "authorization_code",
+            "code":request.args.get("code"),
+            "redirect_uri":self.redirect_uri,
+            "scope":self.scope
+        }
+        auth = requests.post(url = self.discord_token_url, data = payload).json()
         return auth["access_token"]
 
 
     def _get_user_json(self, access_token):
         url = f"{self.discord_api_url}/users/@me"
         headers = {"Authorization": f"Bearer {access_token}"}
- 
+
         user_object = requests.get(url = url, headers = headers).json()
         return user_object
 
 
     def callback(self):
         access = self._get_access_token()
-
         return self._get_user_json(access)

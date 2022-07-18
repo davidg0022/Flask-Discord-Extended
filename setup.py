@@ -20,14 +20,14 @@ requirements = [
 
 setup(
     name='Flask-Discord-Extended',
-    version='0.0.1',
+    version='0.0.5',
     url='https://github.com/davidg0022/Flask-Discord-Extended',
     license='MIT',
     author='Gatea David',
     author_email='davidgatea21@gmail.com',
     description='The Python OAuth2 and Discord Bot Commands for Flask applications.',
     long_description_content_type="text/markdown",
-    long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
+    long_description=open('README.md').read(),
     packages=find_packages(),
     platforms='any',
     zip_safe=False,
